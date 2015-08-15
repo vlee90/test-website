@@ -6,6 +6,7 @@
 	<meta name="description" content="Blog on the story behind each fight">
 	<meta name="author" content="Vincent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script type="text/javascript" src="javascript.js"></script>
 </head>
 <body>
@@ -18,19 +19,21 @@
 		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-55THG9');</script>
 	<!-- End Google Tag Manager -->
-	<div id="header" class="col-100 container">
-		<h1>Story of the Fight</h1>
+	<div class="top flex-wrapper-vertical">
+		<div id="header">
+			<h1>Story of the Fight</h1>
+		</div>
+		<div id="navigation">
+			<ul>
+				<li>Home</li>
+				<li><a href="about.html">About Me</a></li>
+				<li>Blog</li>
+				<li>Store</li>
+			</ul>
+		</div>
 	</div>
-	<div id="navigation" class="col-100 container">
-		<ul>
-			<li>Home</li>
-			<li>About Me</li>
-			<li>Blog</li>
-			<li>Store</li>
-		</ul>
-	</div>
-	<div class="wrapper">
-		<div id="introduction" class="col-80 container">
+	<div class="flex-wrapper">
+		<div id="introduction">
 			<h1>What is the story of the fight?</h1>
 			<p>
 				Just as a book reads from left to right - start to finish, so does a fight. It can start as soon as the referee shouts out "Fight!". The engagement begins and after a few minutes it ends. There a story within these minutes - what each character is feeling, the sensation as time slows down to a near halt. Or the feeling of how quickly time seems to pass. What are they thinking? Are they thinking too much? 
@@ -44,14 +47,14 @@
 				As these two fighters stare across the cage at each other, know that this story isn't about to start, and regardless of the outcome it will not end for both fighters. The story to this fight began many years ago... and will continue for many years to come... This is the story of the fight.
 			</p>
 		</div>
-		<div id="side-image" class="col-20 container">
-			<img src="old-school-boxing-ring.jpg">
+		<div id="aside">
+
 		</div>
 	</div>
-	<div id="footer" class="col-100 container">
+	<div id="footer" class="flex-wrapper-vertical">
 		<form id="email-form">
 			<p>Contact me</p>
-			<input type="text" name="Email Address" value="Email">
+			<input id="email-address" type="text" name="Email Address" value="Email">
 			<br>
 			<input type="radio" name="Subscribe">
 			<br>
@@ -60,7 +63,7 @@
 		<br>
 		<a href="http://www.twitter.com/vlee90">Author's Twitter Page</a>
 		<br>
-</div>
+	</div>
 
 </body>
 </html>
