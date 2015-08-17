@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 @media only screen and (max-width: 500px) {
@@ -11,8 +13,8 @@ html {
 	height: 100%;
 }
 body {
-	background-color: #D52D32;
 	height: 100%;
+	background-color: #D52D32;
 }
 /*Colors
 Primary: #D52D32
@@ -20,6 +22,7 @@ Secondary #6E0D25
 Support: #A7988B
 Text Background: #F1EBE4;
 */
+
 
 .flex-wrapper {
 	width: 100%;
@@ -34,44 +37,38 @@ Text Background: #F1EBE4;
 }
 
 .top {
-	height: 120px;
+		height: 120px;
 }
 #one {
-	flex: 1;
-	height: 100px;
 	background-color: black;
-	margin: 5px;
 }
 #two {
-	flex: 3;
-	height: 100px;
 	background-color: blue;
-	margin: 5px;
 }
 
 li {
-	text-align: center;
+	background-color: blue;
+		text-align: center;
 	vertical-align: middle;
 	width: 24%;
 	display: inline-block;
-	background-color: blue;
 }
 
 #header {
-	flex: 2;
 	background-color: #6E0D25;
 	color:white;
+		flex: 2;
 	text-align: center;
 	vertical-align: middle;
 }
 
 #navigation {
-	flex: 1;
+		flex: 1;
 	width: 100%;
 	background-color: #6E0D25;
 }
 
-#introduction {
+#main {
 	flex: 5;
 	background-color: #F1EBE4;
 }
@@ -81,13 +78,8 @@ li {
 	background-color: #A7988B;
 }
 
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
 #footer {
+	text-align: center;
 	background-color: #6E0D25;
 	color: white;
-	text-align: center;
 }
