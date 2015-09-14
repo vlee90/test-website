@@ -13,3 +13,7 @@ $("p").append("HI");
 function storeEmail(email) {
 	alert("Thank you " + email + " for signing up.");
 }
+
+function myOnClickMethod() {
+	alert("my on click method fired");
+}
