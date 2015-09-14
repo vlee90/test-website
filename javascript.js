@@ -16,4 +16,5 @@ function storeEmail(email) {
 
 function myOnClickMethod() {
 	alert("my on click method fired");
+	return false;
 }
