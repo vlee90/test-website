@@ -16,5 +16,9 @@ function storeEmail(email) {
 
 function myOnClickMethod() {
 	alert("my on click method fired");
+	analytics.track('Contact Me Clicked', {
+		plan: "Trial",
+		features: "Full Analytics"
+	})
 	return false;
 }
