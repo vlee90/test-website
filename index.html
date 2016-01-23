@@ -17,11 +17,12 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-59762855-7', 'auto');
+ga('require', 'ec');
 ga('send', 'pageview', {
 	'dimension3' : 'Vincent'
 });
 
-ga('send', 'event', 'ecommerce', 'impression', 'ec:addImpression', {
+ga('ec:addImpression', {
 	'id' : 'inverted-gear-1',
 	'name' : 'panda-rashguard',
 	'category' : 'Rashguards',
@@ -31,8 +32,9 @@ ga('send', 'event', 'ecommerce', 'impression', 'ec:addImpression', {
 	'price' : '30',
 	'dimension4' : 'Yes'
 });
+ga('send', 'pageview');
 
-ga('send', 'event', 'ecommerce', 'add', 'ec:addProduct' ,{
+ga('ec:addProduct' ,{
 	'id' : 'inverted-gear-1',
 	'name' : 'panda-rashguard',
 	'category' : 'Rashguards',
@@ -41,8 +43,10 @@ ga('send', 'event', 'ecommerce', 'add', 'ec:addProduct' ,{
 	'price' : '30',
 	'position' : 1
 });
+ga('ec:setAction' , 'add');
+ga('send', 'event', 'ecommerce', 'add');
 
-ga('send', 'event', 'ecommerce', 'add', 'ec:addProduct' ,{
+ga('ec:addProduct' ,{
 	'id' : 'inverted-gear-2',
 	'name' : 'panda-shorts',
 	'category' : 'Shorts',
@@ -52,12 +56,16 @@ ga('send', 'event', 'ecommerce', 'add', 'ec:addProduct' ,{
 	'price' : '20',
 	'dimension4' : 'Yes'
 });
+ga('ec:setAction' , 'add');
+ga('send', 'event', 'ecommerce', 'add');
 
-ga('send', 'event', 'ecommerce', 'transaction','ec:setAction', 'purchase', {
+ga('ec:setAction', 'purchase', {
 	'id' : 'trans-ID-1',
 	'affiliation' : 'Analytics Pros',
 	'revenue' : '50'
 });
+
+ga('send', 'event', 'ecommerce', 'transaction');
 
 
 </script>
