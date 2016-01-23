@@ -21,7 +21,7 @@ ga('send', 'pageview', {
 	'dimension3' : 'Vincent'
 });
 
-ga('ec:addImpression', {
+ga('send', 'event', 'ecommerce', 'impression', 'ec:addImpression', {
 	'id' : 'inverted-gear-1',
 	'name' : 'panda-rashguard',
 	'category' : 'Rashguards',
@@ -31,9 +31,8 @@ ga('ec:addImpression', {
 	'price' : '30',
 	'dimension4' : 'Yes'
 });
-ga('send', 'event', 'ecommerce', 'impression');
 
-ga('ec:addProduct' ,{
+ga('send', 'event', 'ecommerce', 'add', 'ec:addProduct' ,{
 	'id' : 'inverted-gear-1',
 	'name' : 'panda-rashguard',
 	'category' : 'Rashguards',
@@ -43,9 +42,7 @@ ga('ec:addProduct' ,{
 	'position' : 1
 });
 
-ga('send', 'event', 'ecommerce', 'add');
-
-ga('ec:addProduct' ,{
+ga('send', 'event', 'ecommerce', 'add', 'ec:addProduct' ,{
 	'id' : 'inverted-gear-2',
 	'name' : 'panda-shorts',
 	'category' : 'Shorts',
@@ -56,15 +53,11 @@ ga('ec:addProduct' ,{
 	'dimension4' : 'Yes'
 });
 
-ga('send', 'event', 'ecommerce', 'add');
-
-ga('ec:setAction', 'purchase', {
+ga('send', 'event', 'ecommerce', 'transaction','ec:setAction', 'purchase', {
 	'id' : 'trans-ID-1',
 	'affiliation' : 'Analytics Pros',
 	'revenue' : '50'
 });
-
-ga('send', 'event', 'ecommerce', 'transaction');
 
 
 </script>
