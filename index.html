@@ -31,6 +31,7 @@ ga('ec:addImpression', {
 	'price' : '30',
 	'dimension4' : 'Yes'
 });
+ga('send', 'event', 'ecommerce', 'impression');
 
 ga('ec:addProduct' ,{
 	'id' : 'inverted-gear-1',
@@ -41,6 +42,8 @@ ga('ec:addProduct' ,{
 	'price' : '30',
 	'position' : 1
 });
+
+ga('send', 'event', 'ecommerce', 'add');
 
 ga('ec:addProduct' ,{
 	'id' : 'inverted-gear-2',
@@ -53,11 +56,15 @@ ga('ec:addProduct' ,{
 	'dimension4' : 'Yes'
 });
 
+ga('send', 'event', 'ecommerce', 'add');
+
 ga('ec:setAction', 'purchase', {
 	'id' : 'trans-ID-1',
 	'affiliation' : 'Analytics Pros',
 	'revenue' : '50'
 });
+
+ga('send', 'event', 'ecommerce', 'transaction');
 
 
 </script>
