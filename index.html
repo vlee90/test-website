@@ -90,7 +90,12 @@ analytics.page()
 		<br>
 	</div>
 	<script>
-		_gaq.push(['_trackEvent','Classic Page Loaded', 'Classic Successful']);
+		// _gaq.push(['_trackEvent','Classic Page Loaded', 'Classic Successful']);
+		window.dataLayer.push({'event' : 'event-from-web-view',
+								'email-address' : 'callback-email',
+							'eventCallback' : function() {
+								alert('GTM Event Callback Success - {{email-address}}');
+							}});
 	</script>
 </body>
 </html>
