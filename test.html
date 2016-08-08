@@ -30,9 +30,6 @@ End Google Analytics -->
 		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-55THG9');</script>
  	End Google Tag Manager -->
-	
-</script>
--->
 	<div class='wrapper'>.
 		<div class='header'>
 			Header
@@ -73,7 +70,7 @@ End Google Analytics -->
 	}
 		
 		if (window.mobilecheck() == true && getParameterByName('native_app', window.location.href) == 'true') {
-			window.location.href = "testwebview://apphit"
+			window.location.href = "testwebview://analyticsEvent:screen-load"
 		};
 	</script>
 </body>
