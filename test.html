@@ -31,7 +31,7 @@ End Google Analytics -->
 	})(window,document,'script','dataLayer','GTM-55THG9');</script>
  	End Google Tag Manager -->
 	<div class='wrapper'>.
-		<div class='header'>
+		<div class='header' onclick="header-click">
 			Header
 		</div>
 		<div class='main'>
@@ -52,6 +52,9 @@ End Google Analytics -->
 		</div>
 	</div>
 	<script>
+		function headerClick(){
+			alert('header click');
+		}
 	// Check to see if native app
 		window.mobilecheck = function() {
  			 var check = false;
@@ -70,7 +73,7 @@ End Google Analytics -->
 	}
 		
 		if (window.mobilecheck() == true && getParameterByName('native_app', window.location.href) == 'true') {
-			window.location.href = "testwebview://analyticsEvent=screen-load"
+			window.location.href = "testwebview://analytics?event=screen-load&screenName=homescreen"
 		};
 	</script>
 </body>
