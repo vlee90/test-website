@@ -75,12 +75,12 @@ End Google Analytics -->
 		
 			if (window.mobilecheck() == true && getParameterByName('native_app', window.location.href) == 'true') {
 				return true;
-			};
+			}
 			else {
 				return false;
 			}
 		}
-		
+
 		isNativeApp = nativeAppCheck();
 		if (isNativeApp) {
 			window.location.href = "testwebview://analytics?event=screen-load&screenName=homescreen"	
