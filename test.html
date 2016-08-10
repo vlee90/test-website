@@ -54,6 +54,10 @@ End Google Analytics -->
 	<script>
 		function headerClick(){
 			alert('header click');
+			isNativeApp = nativeAppCheck();
+			if (isNativeApp) {
+				window.location.href = "testwebview://analytics?event=header-click&category=header&action=click"	
+			}
 		}
 	// Check to see if native app
 		function nativeAppCheck() {
