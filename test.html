@@ -7,22 +7,22 @@
 	<meta name="author" content="Vincent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
 	<script>
-		var dataLayer = [{"event": "dataLayer-load"}];
+		var dataLayer = [{"event": "dataLayer-load",
+							"pageType": "homepage",
+							"userId": "e1j3fi9djsnif90898s2osdi1pz1"}];
 	</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5STZCB');</script>
+})(window,document,'script','dataLayer','GTM-55THG9');</script>
 <!-- End Google Tag Manager -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5STZCB"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55THG9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 	<script>
@@ -35,7 +35,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class='main'>
 			<div class='article'>
 				<p>This is the main body of work</p>
-				<iframe src="iframe.html"></iframe>
+				<button onclick="buttonClick">
+					Click
+				</button>
+				<!-- <iframe src="iframe.html"></iframe> -->
 			</div>
 			<div class='aside'>
 				<div class='profile-picture'>
@@ -51,37 +54,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 	<script>
-		function headerClick(){
-			alert('header click');
-			isNativeApp = nativeAppCheck();
-			if (isNativeApp) {
-				window.location.href = "testwebview://analytics?event=header-click&category=header&action=click"	
-			}
+		function buttonClick(){
+			dataLayer.push({
+				"event" : "buttonClick"
+			})
 		}
-	// Check to see if native app
-		function nativeAppCheck() {
-			function getParameterByName(name, url) {
-	    		if (!url) url = window.location.href;
-	    			name = name.replace(/[\[\]]/g, "\\$&");
-	    			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-	        		results = regex.exec(url);
-	    		if (!results) return null;
-	    		if (!results[2]) return '';
-	    		return decodeURIComponent(results[2].replace(/\+/g, " "));
-			}
-		
-			if (getParameterByName('native_app', window.location.href) == 'true') {
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
+		// function headerClick(){
+			// alert('header click');
 
-		isNativeApp = nativeAppCheck();
-		if (isNativeApp) {
-			window.location.href = "testwebview://analytics?event=screen-load&screenName=homescreen"	
-		}
+			// isNativeApp = nativeAppCheck();
+			// if (isNativeApp) {
+			// 	window.location.href = "testwebview://analytics?event=header-click&category=header&action=click"	
+			// }
+	// 	}
+	// // Check to see if native app
+	// 	function nativeAppCheck() {
+	// 		function getParameterByName(name, url) {
+	//     		if (!url) url = window.location.href;
+	//     			name = name.replace(/[\[\]]/g, "\\$&");
+	//     			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	//         		results = regex.exec(url);
+	//     		if (!results) return null;
+	//     		if (!results[2]) return '';
+	//     		return decodeURIComponent(results[2].replace(/\+/g, " "));
+	// 		}
+		
+	// 		if (getParameterByName('native_app', window.location.href) == 'true') {
+	// 			return true;
+	// 		}
+	// 		else {
+	// 			return false;
+	// 		}
+	// 	}
+
+	// 	isNativeApp = nativeAppCheck();
+	// 	if (isNativeApp) {
+	// 		window.location.href = "testwebview://analytics?event=screen-load&screenName=homescreen"	
+	// 	}
 	</script>
 </body>
 </html>
