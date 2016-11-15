@@ -57,8 +57,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<script>
 		function buttonClick(){
 			dataLayer.push({
-				"event" : "buttonClick"
-				"favoriteColor": "red",
+				"event" : "buttonClick",
+				"favoriteColor": document.getElementById("textField").value
 			})
 		}
 		// function headerClick(){
