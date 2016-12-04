@@ -61,6 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				"event" : "buttonClick",
 				"favoriteColor": document.getElementById("textField").value
 			})
+			window.frames['test-frame'].document.getElementsByTagName('P')[0].innerHTML = document.getElementById("textField").value
 		}
 		// function headerClick(){
 			// alert('header click');
