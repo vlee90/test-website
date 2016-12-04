@@ -14,6 +14,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NN8GN4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-	<p id="iframe-body">Hello World</p>
+	<p id="iframe-body">Favorite Color?</p>
+	<button type="button" onclick="submitColor()">Submit Color</button>
 </body>
+<script>
+	function submitColor() {
+		dataLayer.push({
+			'event': 'submitColor',
+			'favoriteColor': window.document.getElementsByTagName('P')[0].innerHTML
+		})
+	}
+</script>
 </html>
