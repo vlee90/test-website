@@ -17,16 +17,30 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5STZCB');</script>
+})(window,document,'script','dataLayer','GTM-55THG9');</script>
 <!-- End Google Tag Manager -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5STZCB"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55THG9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 	<script>
-		dataLayer.push({'event': 'start'});
+		dataLayer.push({
+			'event' : 'product-impression',
+			'ecommerce': {
+			'currencyCode' : 'USD',	//Currency Code.
+			'impressions': [{				//Array of products.
+			'name': (String)<Product Name>,		//The name of the product. *Either this field or id must be set.
+			'id': (String)<Product ID>,			//The product ID or SKU. *Either this field or name must be set.
+			'price': (String)<Product Price>,		//The price of a product.
+			'brand': (String)<Product Brand>,		//The brand associated with the product.
+			'category': (String)<Product Category>,	//The category to which the product belongs.
+			'variant': (String)<Product Variant>,		//The variant of the product.
+			'list': (String)<Product List>,		//The list or collection to which the product belongs.
+			'position': (Number)<List Position>}]		//The product's position in a list or collection.
+		}})
+			//if value is unavailable, pass in a blank string "".
 	</script>
 	<div class='wrapper'>.
 		<div class='header' onclick="headerClick()">
@@ -56,13 +70,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 	<script>
-		function buttonClick(){
-			dataLayer.push({
-				"event" : "buttonClick",
-				"favoriteColor": document.getElementById("textField").value
-			})
-			window.frames['test-frame'].document.getElementsByTagName('P')[0].innerHTML = document.getElementById("textField").value
-		}
+		// function buttonClick(){
+		// 	dataLayer.push({
+		// 		"event" : "buttonClick",
+		// 		"favoriteColor": document.getElementById("textField").value
+		// 	})
+		// 	window.frames['test-frame'].document.getElementsByTagName('P')[0].innerHTML = document.getElementById("textField").value
+		// }
+
+		dataLayer.push({
+			'event' : 'product-detail',
+			'ecommerce': {
+			'detail': {
+			'actionField': {'list': (String)<Product List>},	//The list or collection to which the product belongs.
+			'products' : [{					//Array of products.
+			'name': (String)<Product Name>,			//The name of the product. *Either this field or id must be set.
+			'id': (String)<Product ID>,			//The product ID or SKU. *Either this field or name must be set.
+			'price': (String)<Product Price>,		//The price of a product.
+			'brand': (String)<Product Brand>,		//The brand associated with the product.
+			'category': (String)<Product Category>,		//The category to which the product belongs.
+			'variant': (String)<Product Variant>}]		//The variant of the product.
+		}})
+//if value is unavailable, pass in a blank string "".
+
+
+
 		// function headerClick(){
 			// alert('header click');
 
