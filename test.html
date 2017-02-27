@@ -70,13 +70,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 	<script>
-		// function buttonClick(){
-		// 	dataLayer.push({
-		// 		"event" : "buttonClick",
-		// 		"favoriteColor": document.getElementById("textField").value
-		// 	})
-		// 	window.frames['test-frame'].document.getElementsByTagName('P')[0].innerHTML = document.getElementById("textField").value
-		// }
+		function buttonClick(){
+			dataLayer.push({
+				"event" : "buttonClick",
+				"favoriteColor": document.getElementById("textField").value
+			})
+			window.frames['test-frame'].document.getElementsByTagName('P')[0].innerHTML = document.getElementById("textField").value
+		}
 
 		dataLayer.push({
 			'event' : 'product-detail',
