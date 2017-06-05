@@ -21,24 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55THG9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-	<script>
 
-		// dataLayer.push({
-		// 	'event' : 'product-impression',
-		// 	'ecommerce': {
-		// 	'currencyCode' : 'USD',	//Currency Code.
-		// 	'impressions': [{				//Array of products.
-		// 	'name': (String)<Product Name>,		//The name of the product. *Either this field or id must be set.
-		// 	'id': (String)<Product ID>,			//The product ID or SKU. *Either this field or name must be set.
-		// 	'price': (String)<Product Price>,		//The price of a product.
-		// 	'brand': (String)<Product Brand>,		//The brand associated with the product.
-		// 	'category': (String)<Product Category>,	//The category to which the product belongs.
-		// 	'variant': (String)<Product Variant>,		//The variant of the product.
-		// 	'list': (String)<Product List>,		//The list or collection to which the product belongs.
-		// 	'position': (Number)<List Position>}]		//The product's position in a list or collection.
-		// }})
-			//if value is unavailable, pass in a blank string "".
-	</script>
 	<div class='wrapper'>.
 		<div class='header' onclick="headerClick()">
 			Header
@@ -48,7 +31,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<p>This is the main body of work</p>
 				Favorite Color:
 				<input type="text" name="favoriteColor" id="textField"></input>
-				<button onclick="buttonClick()">
+				<button onclick="logEvent('webView')">
 					Click
 				</button>
 				<iframe src="iframe.html" name="test-frame"></iframe>
@@ -74,61 +57,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			})
 			window.frames['test-frame'].document.getElementsByTagName('P')[0].innerHTML = document.getElementById("textField").value
 		}
+		function logEvent(name, params) {
+		  if (!name) {
+		    return;
+		  }
 
-		// dataLayer.push({
-		// 	'event' : 'product-detail',
-		// 	'ecommerce': {
-		// 	'detail': {
-		// 	'actionField': {'list': (String)<Product List>},	//The list or collection to which the product belongs.
-		// 	'products' : [{					//Array of products.
-		// 	'name': (String)<Product Name>,			//The name of the product. *Either this field or id must be set.
-		// 	'id': (String)<Product ID>,			//The product ID or SKU. *Either this field or name must be set.
-		// 	'price': (String)<Product Price>,		//The price of a product.
-		// 	'brand': (String)<Product Brand>,		//The brand associated with the product.
-		// 	'category': (String)<Product Category>,		//The category to which the product belongs.
-		// 	'variant': (String)<Product Variant>}]		//The variant of the product.
-		// }})
-//if value is unavailable, pass in a blank string "".
+		  if (window.AnalyticsWebInterface) {
+		    // Call Android interface
+		    window.AnalyticsWebInterface.logEvent(name, JSON.stringify(params));
+		  } else if (window.webkit
+		      && window.webkit.messageHandlers
+		      && window.webkit.messageHandlers.firebase) {
+		    // Call iOS interface
+		    var message = {
+		      command: 'logEvent',
+		      name: name,
+		      parameters: params
+		    };
+		    window.webkit.messageHandlers.firebase.postMessage(message);
+		  } else {
+		    // No Android or iOS interface found
+		    console.log("No native APIs found.");
+		  }
+		}
+		function setUserProperty(name, value) {
+		  if (!name || !value) {
+		    return;
+		  }
 
-
-
-		// function headerClick(){
-			// alert('header click');
-
-			// isNativeApp = nativeAppCheck();
-			// if (isNativeApp) {
-			// 	window.location.href = "testwebview://analytics?event=header-click&category=header&action=click"	
-			// }
-	// 	}
-	// // Check to see if native app
-	// 	function nativeAppCheck() {
-	// 		function getParameterByName(name, url) {
-	//     		if (!url) url = window.location.href;
-	//     			name = name.replace(/[\[\]]/g, "\\$&");
-	//     			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-	//         		results = regex.exec(url);
-	//     		if (!results) return null;
-	//     		if (!results[2]) return '';
-	//     		return decodeURIComponent(results[2].replace(/\+/g, " "));
-	// 		}
-		
-	// 		if (getParameterByName('native_app', window.location.href) == 'true') {
-	// 			return true;
-	// 		}
-	// 		else {
-	// 			return false;
-	// 		}
-	// 	}
-
-	// 	isNativeApp = nativeAppCheck();
-	// 	if (isNativeApp) {
-	// 		window.location.href = "testwebview://analytics?event=screen-load&screenName=homescreen"	
-	// 	}
-	</script>
-	<script>
-		var dataLayer = [{"event": "dataLayer-load",
-							"pageType": "homepage",
-							"userId": "e1j3fi9djsnif90898s2osdi1pz1"}];
+		  if (window.AnalyticsWebInterface) {
+		    // Call Android interface
+		    window.AnalyticsWebInterface.setUserProperty(name, value);
+		  } else if (window.webkit
+		      && window.webkit.messageHandlers
+		      && window.webkit.messageHandlers.firebase) {
+		    // Call iOS interface
+		    var message = {
+		      command: 'setUserProperty',
+		      name: name,
+		      value: value
+		   };
+		    window.webkit.messageHandlers.firebase.postMessage(message);
+		  } else {
+		    // No Android or iOS interface found
+		    console.log("No native APIs found.");
+		  }
+		}
 	</script>
 </body>
 </html>
