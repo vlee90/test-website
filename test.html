@@ -9,7 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>window.firstName = "vincent"</script>
 <!-- Start Optimize -->
-<!-- Page-hiding snippet (recommended)  -->
+<!-- Page-hiding snippet (recommended)
 <style>.async-hide { opacity: 0 !important} </style>
 <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
 h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
@@ -24,14 +24,47 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   ga('create', 'UA-59762855-7', 'auto');
   ga('require', 'GTM-MKS33L9');
  </script>
-<!-- End Optimize -->
-<!-- Google Tag Manager -->
+ End Optimize -->
+<!-- Google Tag Manager
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-55THG9');</script>
-<!-- End Google Tag Manager -->
+ End Google Tag Manager -->
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-59762855-7', 'auto');
+ga('require', 'ec');
+ga('send', 'pageview');
+
+ga('ec:addProduct', {               // Provide product details in an productFieldObject.
+  'id': '001',                   // Product ID (string).
+  'name': 'Zero Sum Product', // Product name (string).
+  'category': 'Apparel',            // Product category (string).
+  'brand': 'Google',                // Product brand (string).
+  'variant': 'black',               // Product variant (string).
+  'price': '0.0',                 // Product price (currency).
+  'quantity': 1                     // Product quantity (number).
+});
+
+ga('ec:setAction', 'purchase', {          // Transaction details are provided in an actionFieldObject.
+  'id': 'T1',                         // (Required) Transaction id (string).
+  'affiliation': 'Google Store', // Affiliation (string).
+  'revenue': '0.0',                     // Revenue (currency).
+  'tax': '0.0',                          // Tax (currency).
+  'shipping': '0.0'                     // Shipping (currency).
+});
+
+</script>
+<!-- End Google Analytics -->
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
