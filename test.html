@@ -42,9 +42,10 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-59762855-7', 'auto');
 ga('require', 'ec');
+ga('set', 'dimension1', "test")
 ga('send', 'pageview');
 
-ga('set', 'dimension1', "test")
+
 
 ga('ec:addProduct', {               // Provide product details in an productFieldObject.
   'id': '001',                   // Product ID (string).
@@ -64,7 +65,7 @@ ga('ec:setAction', 'purchase', {          // Transaction details are provided in
   'shipping': '0.0'                     // Shipping (currency).
 });
 
-//ga('send', 'event', "ecommerce", "transaction");
+ga('send', 'event', "ecommerce", "transaction");
 
 </script>
 <!-- End Google Analytics -->
