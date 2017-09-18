@@ -57,15 +57,22 @@ ga('ec:addProduct', {               // Provide product details in an productFiel
   'quantity': 1                     // Product quantity (number).
 });
 
-ga('ec:setAction', 'purchase', {          // Transaction details are provided in an actionFieldObject.
-  'id': 'T1',                         // (Required) Transaction id (string).
-  'affiliation': 'Google Store', // Affiliation (string).
-  'revenue': '0.0',                     // Revenue (currency).
-  'tax': '0.0',                          // Tax (currency).
-  'shipping': '0.0'                     // Shipping (currency).
-});
+ga('ec':'setAction', 'checkout', {
+	'step' : 2,
+	'option': 'test'
+})
 
-ga('send', 'event', "ecommerce", "transaction");
+// ga('ec:setAction', 'purchase', {          // Transaction details are provided in an actionFieldObject.
+//   'id': 'T1',                         // (Required) Transaction id (string).
+//   'affiliation': 'Google Store', // Affiliation (string).
+//   'revenue': '0.0',                     // Revenue (currency).
+//   'tax': '0.0',                          // Tax (currency).
+//   'shipping': '0.0'                     // Shipping (currency).
+//});
+
+ga('send', 'event', "ecommerce", "checkout step 2");
+
+//ga('send', 'event', "ecommerce", "transaction");
 
 </script>
 <!-- End Google Analytics -->
