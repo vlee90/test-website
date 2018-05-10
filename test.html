@@ -8,6 +8,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script>window.firstName = "vincent"</script>
+	<script>
+		window.dataLayer.push({
+			'event': 'dataLayer-loaded',
+			'buildFlag': 'dev'
+			'clientId': '123'});
+	</script>
 <!-- Start Optimize -->
 <!-- Page-hiding snippet (recommended)
 <style>.async-hide { opacity: 0 !important} </style>
