@@ -7,14 +7,6 @@
 	<meta name="author" content="Vincent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>window.firstName = "vincent"</script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		window.dataLayer.push({
-			'event': 'dataLayer-loaded',
-			'buildFlag': 'prod',
-			'clientId': '123'});
-	</script>
 	<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -37,7 +29,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<p>This is the main body of work</p>
 				Favorite Color:
 				<input type="text" name="favoriteColor" id="textField"></input>
-				<button onclick="logEvent('webView')">
 					Click
 				</button>
 				<iframe src="iframe.html" name="test-frame"></iframe>
@@ -56,65 +47,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</div>
 	<script>
-		function headerClick(){
-			window.dataLayer.push({'event':'optimize.custom.start'});
-		}
-		function buttonClick(){
-			dataLayer.push({
-				"event" : "buttonClick",
-				"favoriteColor": document.getElementById("textField").value
-			})
-			window.frames['test-frame'].document.getElementsByTagName('P')[0].innerHTML = document.getElementById("textField").value
-		}
-		function logEvent(name, params) {
-		  if (!name) {
-		    return;
-		  }
-
-		  if (window.AnalyticsWebInterface) {
-		    // Call Android interface
-		    window.AnalyticsWebInterface.logEvent(name, JSON.stringify(params));
-		  } else if (window.webkit
-		      && window.webkit.messageHandlers
-		      && window.webkit.messageHandlers.firebase) {
-		    // Call iOS interface
-		    var message = {
-		      command: 'logEvent',
-		      name: name,
-		      parameters: params
-		    };
-		    window.webkit.messageHandlers.firebase.postMessage(message);
-		  } else {
-		    // No Android or iOS interface found
-		    console.log("No native APIs found.");
-		  }
-		}
-		function setUserProperty(name, value) {
-		  if (!name || !value) {
-		    return;
-		  }
-
-		  if (window.AnalyticsWebInterface) {
-		    // Call Android interface
-		    window.AnalyticsWebInterface.setUserProperty(name, value);
-		  } else if (window.webkit
-		      && window.webkit.messageHandlers
-		      && window.webkit.messageHandlers.firebase) {
-		    // Call iOS interface
-		    var message = {
-		      command: 'setUserProperty',
-		      name: name,
-		      value: value
-		   };
-		    window.webkit.messageHandlers.firebase.postMessage(message);
-		  } else {
-		    // No Android or iOS interface found
-		    console.log("No native APIs found.");
-		  }
-		}
-	</script>
-	<script>
-		window.analyticsInterface.passString("Vincent")
 		window.dataLayer.push({'event':'test'});
 	</script>
 </body>
