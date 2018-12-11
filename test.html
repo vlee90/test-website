@@ -22,7 +22,26 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'G-K8QJ9S7MEZ');
+gtag('config', 'G-K8QJ9S7MEZ', {
+	'page_title': 'Vincent Test Website',
+	'page_location': 'http://vlee90.github.io/test-website/vincent_test_page.html',
+	'page_path': '/vincent_test_page.html'
+});
+
+gtag('event', 'vincent_test_event');
+gtag('event', 'vincent-test-event');
+gtag('event', 'vincent_test_event_with_parameter', {
+	'favoriteColor':'red'
+});
+
+gtag('event', 'screen_view', {
+  'app_name': 'vincent_test_appname',
+  'screen_name' : 'vincent_test_screenname',
+  'app_id': 'vincent_test_app_id',
+  'app_version': 'vincent_test_app_version',
+  'app_installer_id': 'vincent_test_app_installer_id'
+
+});
 </script>
 
 </head>
