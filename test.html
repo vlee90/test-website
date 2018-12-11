@@ -7,47 +7,55 @@
 	<meta name="author" content="Vincent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Google Tag Manager -->
+	<!-- Google Tag Manager
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-55THG9');</script>
-<!-- End Google Tag Manager -->
+End Google Tag Manager -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8QJ9S7MEZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-K8QJ9S7MEZ');
+</script>
+
 </head>
 <body>
-	<!-- Google Tag Manager (noscript) -->
+	<!-- Google Tag Manager (noscript)
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55THG9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-	<div class='wrapper'>.
-		<div class='header' onclick="headerClick()">
-			Header
+End Google Tag Manager (noscript) -->
+<div class='wrapper'>.
+	<div class='header' onclick="headerClick()">
+		Header
+	</div>
+	<div class='main'>
+		<div class='article'>
+			<p>This is the main body of work</p>
+			Favorite Color:
+			<input type="text" name="favoriteColor" id="textField"></input>
+			Click
+		</button>
+		<iframe src="iframe.html" name="test-frame"></iframe>
+	</div>
+	<div class='aside'>
+		<div class='profile-picture'>
+			<img src="res/twitter-bird.jpeg" height='100px' width='100px'>
 		</div>
-		<div class='main'>
-			<div class='article'>
-				<p>This is the main body of work</p>
-				Favorite Color:
-				<input type="text" name="favoriteColor" id="textField"></input>
-					Click
-				</button>
-				<iframe src="iframe.html" name="test-frame"></iframe>
-			</div>
-			<div class='aside'>
-				<div class='profile-picture'>
-					<img src="res/twitter-bird.jpeg" height='100px' width='100px'>
-				</div>
-				<div class='profile-description'>
-					<p>This is the aside</p>
-				</div>
-			</div>
-		</div>
-		<div class='footer'>
-			<p>Footer</p>
+		<div class='profile-description'>
+			<p>This is the aside</p>
 		</div>
 	</div>
-	<script>
-		window.dataLayer.push({'event':'test'});
-	</script>
+</div>
+<div class='footer'>
+	<p>Footer</p>
+</div>
+</div>
 </body>
 </html>
