@@ -15,7 +15,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-55THG9');</script>
 End Google Tag Manager -->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8QJ9S7MEZ"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -47,6 +47,55 @@ gtag('event', 'screen_view', {
 
 });
 </script>
+-->
+
+<!-- Global site tag (gtag.js) - Google Ads: AW-XXXXX -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-XXXXX-YY');
+gtag('config', 'AW-XXXXX');
+</script>
+
+<!-- Event snippet for Purchase conversion page -->
+<script>
+gtag('event', 'purchase', {
+      'send_to': 'AW-XXXXX/XXXXX',  //conversion ID and conversion label
+      'value': 6, 
+      'currency': 'USD',
+      'transaction_id': '[Pixel_orderid]',
+      'items': [
+      {
+'id': '[Pixel_prodid]',                          // Product ID
+'name': '[Pixel_prodname]',              // Product name. Required
+'category': '[Pixel_pagname]',          // Page Name
+'price': 6,                 // Ticket Cost
+'quantity': 1              // Ticket Quantity
+}
+]
+});
+</script>
+
+<!-- Event snippet for Add To Cart conversion page -->
+<script>
+gtag('event', 'add_to_cart', 
+	'send_to': 'AW-XXXXX/XXXXX',
+	'value': 6, 
+	'currency': 'USD',
+	'items': [
+	{
+	'id': '[Pixel_prodid]',                          // Product ID
+ 	'name': '[Pixel_prodname]',              // Product name. Required
+ 	'category': '[Pixel_pagname]',          // Page Name
+ 	'price': 6,                 // Ticket Cost
+ 	'quantity': 1              // Ticket Quantity
+ }]
+});
+</script>
+
 
 </head>
 <body>
