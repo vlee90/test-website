@@ -49,52 +49,61 @@ gtag('event', 'screen_view', {
 </script>
 -->
 
-<!-- Global site tag (gtag.js) - Google Ads: AW-XXXXX -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXX"></script>
+<!-- Global site tag (gtag.js) - DoubleClick, Google Ads, and Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=DC-XXXXX"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+function gtag(){dataLayer.push(arguments)};
 gtag('js', new Date());
 
-gtag('config', 'UA-XXXXX-YY');
+gtag('config', 'DC-XXXXX');
 gtag('config', 'AW-XXXXX');
+gtag('config', 'UW-XXXXX-Y');
 </script>
+
 
 <!-- Event snippet for Purchase conversion page -->
 <script>
-gtag('event', 'purchase', {
-      'send_to': 'AW-XXXXX/XXXXX',  //conversion ID and conversion label
-      'value': 6, 
-      'currency': 'USD',
-      'transaction_id': '[Pixel_orderid]',
-      'items': [
-      {
-'id': '[Pixel_prodid]',                          // Product ID
-'name': '[Pixel_prodname]',              // Product name. Required
-'category': '[Pixel_pagname]',          // Page Name
-'price': 6,                 // Ticket Cost
-'quantity': 1              // Ticket Quantity
-}
-]
-});
-</script>
-
-<!-- Event snippet for Add To Cart conversion page -->
-<script>
-gtag('event', 'add_to_cart', 
-	'send_to': 'AW-XXXXX/XXXXX',
-	'value': 6, 
+gtag('event', 'purchase',{   
+	'send_to': [
+	'DC-XXXXX/XXXXX/XXXXX+XXXXX',  //conversion ID, activity group tag string, activity tag string + counting method
+	'AW-XXXXX/XXXXX',    //conversion ID and conversion label
+	'UW-XXXXX-Y'],
+	'value': 5,
 	'currency': 'USD',
-	'items': [
-	{
+	'transaction_id': '[Pixel_orderid]', 
+	'U1': '[Custom Floodlight variable]',    //optional to pass a custom variable
+	'items': [{
 	'id': '[Pixel_prodid]',                          // Product ID
  	'name': '[Pixel_prodname]',              // Product name. Required
  	'category': '[Pixel_pagname]',          // Page Name
- 	'price': 6,                 // Ticket Cost
- 	'quantity': 1              // Ticket Quantity
+ 	'price': 5,                 // Ticket Cost
+ 	'quantity': 1               // Ticket Quantity
  }]
 });
+});
 </script>
+
+
+<!-- Event snippet for Add To Cart conversion page -->
+<script>
+gtag('event', 'add_to_cart', {
+	'send_to': [
+'DC-XXXXX/XXXXX',    //conversion ID and conversion label
+'AW-XXXXX/XXXXX',   //conversion ID and conversion label
+'UW-XXXXX-Y'
+],
+'value': 5, 
+'currency': 'USD',
+'items': [
+'id': '[Pixel_prodid]',                          // Product ID
+ 	'name': '[Pixel_prodname]',              // Product name. Required
+'category': '[Pixel_pagname]',          // Page Name
+'price': 5,                 // Ticket Cost
+'quantity': 1               // Ticket Quantity
+});
+</script>
+
 
 
 </head>
