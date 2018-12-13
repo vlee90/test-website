@@ -106,13 +106,17 @@ gtag('event', 'add_to_cart', {
 </script>
 -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-YY"></script>
+<!-- Global site tag (gtag.js) - DoubleClick, Google Ads, and Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=DC-XXXXX"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
 
-  gtag('config', 'UA-XXXXX-YY');
+  gtag('config', 'DC-XXXXX');
+  gtag('config', 'AW-XXXXX');
+  gtag('config', 'UU-XXXXX-YY');	
+
 
   gtag('event', 'add_to_cart', {
   	'send_to': [
