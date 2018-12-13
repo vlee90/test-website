@@ -115,12 +115,14 @@ gtag('event', 'add_to_cart', {
   gtag('config', 'UA-XXXXX-YY');
 
   gtag('event', 'add_to_cart', {
-  "items": [{
-	'id': '[Pixel_prodid]',                 
- 	'name': '[Pixel_prodname]',             
-	'category': '[Pixel_pagname]',          
-	'price': '[Pixel_estbcost]',                
-	'quantity': 1    
+	'value': '[pixel_totrev]', 
+	'currency': 'USD',
+  	"items": [{
+		'id': '[Pixel_prodid]',                 
+ 		'name': '[Pixel_prodname]',             
+		'category': '[Pixel_pagname]',          
+		'price': '[Pixel_estbcost]',                
+		'quantity': 1    
 	}]
 });
 </script>
