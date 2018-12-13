@@ -64,23 +64,24 @@ gtag('config', 'UW-XXXXX-Y');
 
 <!-- Event snippet for Purchase conversion page -->
 <script>
-gtag('event', 'purchase',{   
+gtag('event', 'purchase', {   
 	'send_to': [
-	'DC-XXXXX/XXXXX/XXXXX+XXXXX',  //conversion ID, activity group tag string, activity tag string + counting method
-	'AW-XXXXX/XXXXX',    //conversion ID and conversion label
-	'UW-XXXXX-Y'],
+		'DC-XXXXX/XXXXX/XXXXX+XXXXX',
+		'AW-XXXXX/XXXXX',
+		'UW-XXXXX-Y'
+		],
 	'value': 5,
 	'currency': 'USD',
 	'transaction_id': '[Pixel_orderid]', 
-	'U1': '[Custom Floodlight variable]',    //optional to pass a custom variable
-	'items': [{
-	'id': '[Pixel_prodid]',                          // Product ID
- 	'name': '[Pixel_prodname]',              // Product name. Required
- 	'category': '[Pixel_pagname]',          // Page Name
- 	'price': 5,                 // Ticket Cost
- 	'quantity': 1               // Ticket Quantity
- }]
-});
+	'U1': '[Custom Floodlight variable]',
+	'items': 
+	[{
+		'id': '[Pixel_prodid]',
+		'name': '[Pixel_prodname]',
+		'category': '[Pixel_pagname]',
+		'price': 5,
+		'quantity': 1
+	}]
 });
 </script>
 
@@ -89,18 +90,19 @@ gtag('event', 'purchase',{
 <script>
 gtag('event', 'add_to_cart', {
 	'send_to': [
-'DC-XXXXX/XXXXX',    //conversion ID and conversion label
-'AW-XXXXX/XXXXX',   //conversion ID and conversion label
-'UW-XXXXX-Y'
-],
+		'DC-XXXXX/XXXXX',
+		'AW-XXXXX/XXXXX',
+		'UW-XXXXX-Y'
+		],
 'value': 5, 
 'currency': 'USD',
 'items': [
-'id': '[Pixel_prodid]',                          // Product ID
- 	'name': '[Pixel_prodname]',              // Product name. Required
-'category': '[Pixel_pagname]',          // Page Name
-'price': 5,                 // Ticket Cost
-'quantity': 1               // Ticket Quantity
+'id': '[Pixel_prodid]',
+ 	'name': '[Pixel_prodname]',
+	'category': '[Pixel_pagname]',
+	'price': 5,
+	'quantity': 1
+	]
 });
 </script>
 
