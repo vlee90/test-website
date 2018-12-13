@@ -49,7 +49,7 @@ gtag('event', 'screen_view', {
 </script>
 -->
 
-<!-- Global site tag (gtag.js) - DoubleClick, Google Ads, and Google Analytics -->
+<!-- Global site tag (gtag.js) - DoubleClick, Google Ads, and Google Analytics
 <script async src="https://www.googletagmanager.com/gtag/js?id=DC-XXXXX"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -62,7 +62,7 @@ gtag('config', 'UW-XXXXX-Y');
 </script>
 
 
-<!-- Event snippet for Purchase conversion page -->
+Event snippet for Purchase conversion page 
 <script>
 gtag('event', 'purchase', {   
 	'send_to': [
@@ -85,7 +85,7 @@ gtag('event', 'purchase', {
 </script>
 
 
-<!-- Event snippet for Add To Cart conversion page -->
+Event snippet for Add To Cart conversion page
 <script>
 gtag('event', 'add_to_cart', {
 	'send_to': [
@@ -102,6 +102,32 @@ gtag('event', 'add_to_cart', {
 	'price': 5,
 	'quantity': 1
 	}]
+});
+</script>
+-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-YY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-XXXXX-YY');
+
+  gtag('event', 'add_to_cart', {
+  "items": [
+    {
+      "id": "P12345",
+      "name": "Android Warhol T-Shirt",
+      "list_name": "Search Results",
+      "brand": "Google",
+      "category": "Apparel/T-Shirts",
+      "variant": "Black",
+      "list_position": 1,
+      "quantity": 2,
+      "price": '2.0'
+    }
+  ]
 });
 </script>
 
