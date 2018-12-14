@@ -49,125 +49,66 @@ gtag('event', 'screen_view', {
 </script>
 -->
 
-<!-- Global site tag (gtag.js) - DoubleClick, Google Ads, and Google Analytics
-<script async src="https://www.googletagmanager.com/gtag/js?id=DC-XXXXX"></script>
+<!-- Global site tag (gtag.js) - DoubleClick, Google Ads, and Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=DC-1234567"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments)};
 gtag('js', new Date());
 
-gtag('config', 'DC-XXXXX');
-gtag('config', 'AW-XXXXX');
-gtag('config', 'UW-XXXXX-Y');
-</script>
+gtag('config', 'DC-1234567');
+//gtag('config', 'AW-XXXXX');
+//gtag('config', 'UA-XXXXX-YY');	
 
-
-Event snippet for Purchase conversion page 
-<script>
-gtag('event', 'purchase', {   
-	'send_to': [
-		'DC-XXXXX/XXXXX/XXXXX+XXXXX',
-		'AW-XXXXX/XXXXX',
-		'UW-XXXXX-Y'
-		],
-	'value': 5,
-	'currency': 'USD',
-	'transaction_id': '[Pixel_orderid]', 
-	'U1': '[Custom Floodlight variable]',
-	'items': [{
-		'id': '[Pixel_prodid]',
-		'name': '[Pixel_prodname]',
-		'category': '[Pixel_pagname]',
-		'price': 5,
-		'quantity': 1
-	}]
-});
-</script>
-
-
-Event snippet for Add To Cart conversion page
-<script>
 gtag('event', 'add_to_cart', {
-	'send_to': [
-		'DC-XXXXX/XXXXX',
-		'AW-XXXXX/XXXXX',
-		'UW-XXXXX-Y'
-		],
-'value': 5, 
+'value': '[pixel_totrev]', 
 'currency': 'USD',
-'items': [{
-	'id': '[Pixel_prodid]',
- 	'name': '[Pixel_prodname]',
-	'category': '[Pixel_pagname]',
-	'price': 5,
-	'quantity': 1
+'U1': '[Pixel_prodid]',
+'U2': '[Pixel_prodname]',
+'U3': '[Pixel_perfdate]',
+'U4': '[Pixel_perftime]',
+'U5': '[Pixel_estbcost]',
+'U6': '[Pixel_pagname]',
+'U7': '[Pixel_countryname]',
+'U8': '[Pixel_state]',
+'U9': '[Pixel_totrev]',
+'U11': '[Pixel_evntqty]',
+'allow_custom_scripts': true,
+'send_to': 'DC-1234567/[add_to_cart_group]/[add_to_cart_string]+standard',
+	"items": [{
+	'id': '[Pixel_prodid]',                 
+	'name': '[Pixel_prodname]',             
+	'category': '[Pixel_pagname]',          
+	'price': '[Pixel_estbcost]',                
+	'quantity': '[Pixel_evntqty]'
 	}]
 });
-</script>
--->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- Global site tag (gtag.js) - DoubleClick, Google Ads, and Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=DC-1234567"></script>
-<script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
 
-  gtag('config', 'DC-1234567');
-  //gtag('config', 'AW-XXXXX');
-  //gtag('config', 'UA-XXXXX-YY');	
-
-  gtag('event', 'add_to_cart', {
-	'value': '[pixel_totrev]', 
-	'currency': 'USD',
-	'U1': '[Pixel_prodid]',
-    'U2': '[Pixel_prodname]',
-    'U3': '[Pixel_perfdate]',
-    'U4': '[Pixel_perftime]',
-    'U5': '[Pixel_estbcost]',
-    'U6': '[Pixel_pagname]',
-    'U7': '[Pixel_countryname]',
-    'U8': '[Pixel_state]',
-    'U9': '[Pixel_totrev]',
-    'U11': '[Pixel_evntqty]',
-	'allow_custom_scripts': true,
-	'send_to': 'DC-1234567/[add_to_cart_group]/[add_to_cart_string]+standard',
-  	"items": [{
-		'id': '[Pixel_prodid]',                 
- 		'name': '[Pixel_prodname]',             
-		'category': '[Pixel_pagname]',          
-		'price': '[Pixel_estbcost]',                
-		'quantity': '[Pixel_evntqty]'    
+gtag('event', 'purchase', {   
+  'allow_custom_scripts': true,
+  'value': '[pixel_totrev]',            
+  'transaction_id': '[Pixel_orderid]',  
+  'quantity': '[Pixel_evntqty]',        
+  'U1': '[Pixel_prodid]',     
+  'U2': '[Pixel_prodname]',   
+  'U3': '[Pixel_perfdate]',   
+  'U4': '[Pixel_perftime]',   
+  'U5': '[Pixel_estbcost]',   
+  'U6': '[Pixel_pagname]',    
+  'U7': '[Pixel_countryname]',
+  'U8': '[Pixel_state]',      
+  'U9': '[Pixel_totrev]',     
+  'U10': '[Pixel_orderid]',   
+  'U11': '[Pixel_evntqty]',   
+  'send_to': 'DC-1234567/[transaction_group]/[transaction_string]+transactions',
+  'items': [{
+	'id': '[Pixel_prodid]',                 
+	'name': '[Pixel_prodname]',             
+	'category': '[Pixel_pagname]',          
+	'price': '[Pixel_estbcost]',                
+	'quantity': '[Pixel_evntqty]'
 	}]
 });
-/*
-  gtag('event', 'purchase', {   
-	'send_to': 'DC-1234567/purchaseGroup/purchaseString+standard',
-	'allow_custom_scripts': true,
-	'value': 5,
-	'currency': 'USD',
-	'transaction_id': '[Pixel_orderid]', 
-	'U1': '[Custom Floodlight variable]',
-	'items': [{
-		'id': '[Pixel_prodid]',
-		'name': '[Pixel_prodname]',
-		'category': '[Pixel_pagname]',
-		'price': 5,
-		'quantity': 1
-	}]
-});
-*/
-
-/*
-   gtag('event', 'conversion', {
-    'allow_custom_scripts': true,
-    'u1': 'variable',
-    'transaction_id': '1234',
-    'send_to': 'DC-1234567/testGroup/testString+standard'
-	});
-*/
-
-
 </script>
 
 
