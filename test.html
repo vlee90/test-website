@@ -117,12 +117,12 @@ gtag('event', 'add_to_cart', {
   //gtag('config', 'AW-XXXXX');
   //gtag('config', 'UA-XXXXX-YY');	
 
-  gtag('event', 'conversion', {
+  gtag('event', 'add_to_cart', {
 	'value': '[pixel_totrev]', 
 	'currency': 'USD',
 	'U1': 'add_to_cart',
 	'allow_custom_scripts': true,
-	'send_to': 'DC-1234567/conversionGroup/conversionString+standard',
+	'send_to': 'DC-1234567/addToCartGroup/addToCartString+standard',
   	"items": [{
 		'id': '[Pixel_prodid]',                 
  		'name': '[Pixel_prodname]',             
@@ -134,6 +134,7 @@ gtag('event', 'add_to_cart', {
 
   gtag('event', 'purchase', {   
 	'send_to': 'DC-1234567/purchaseGroup/purchaseString+standard',
+	'allow_custom_scripts': true,
 	'value': 5,
 	'currency': 'USD',
 	'transaction_id': '[Pixel_orderid]', 
