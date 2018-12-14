@@ -132,6 +132,21 @@ gtag('event', 'add_to_cart', {
 	}]
 });
 
+  gtag('event', 'purchase', {   
+	'send_to': 'DC-1234567/testGroup/testString+standard',
+	'value': 5,
+	'currency': 'USD',
+	'transaction_id': '[Pixel_orderid]', 
+	'U1': '[Custom Floodlight variable]',
+	'items': [{
+		'id': '[Pixel_prodid]',
+		'name': '[Pixel_prodname]',
+		'category': '[Pixel_pagname]',
+		'price': 5,
+		'quantity': 1
+	}]
+});
+
 /*
    gtag('event', 'conversion', {
     'allow_custom_scripts': true,
