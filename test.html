@@ -132,6 +132,23 @@ gtag('event', 'add_to_cart', {
 	}]
 });
 	*/
+
+  gtag('event', 'purchase', {   
+      'allow_custom_scripts': true,
+      'value': '[pixel_totrev]',                  //Total Revenue
+      'transaction_id': '[Pixel_orderid]',        //Order ID
+      'quantity': '[Pixel_evntqty]',               // Ticket Quantity
+      'U1': '[Pixel_prodid]',     //Product ID
+      'U2': '[Pixel_prodname]',   // Product name
+      'U3': '[Pixel_perfdate]',   // Performance date
+      'U4': '[Pixel_perftime]',   // Performance time
+      'U5': '[Pixel_estbcost]',   // Ticket cost
+      'U6': '[Pixel_pagname]',    // Page Name
+      'U7': '[Pixel_countryname]',   // Purchaser Country
+      'U8': '[Pixel_state]',      // Purchaser State
+      'send_to': 'DC-XXXXX/XXXXX/XXXXX+transactions'  //conversion ID, activity group tag string, activity tag string + counting method
+  });
+
   gtag('event', 'conversion', {   
       'allow_custom_scripts': true,
       'U1': '[Pixel_prodid]',     //Product ID
