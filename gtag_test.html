@@ -1,0 +1,62 @@
+<!-- Global site tag (gtag.js) - DoubleClick, Google Ads, and Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=DC-1234567"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments)};
+gtag('js', new Date());
+
+gtag('config', 'DC-1234567');
+gtag('config', 'AW-1234567');
+gtag('config', 'UA-XXXXX-YY');	
+
+gtag('event', 'add_to_cart', {
+'value': '5', 
+'currency': 'USD',
+'u1': 'Pixel_prodid',
+'u2': 'Pixel_prodname',
+'u3': 'Pixel_perfdate',
+'u4': 'Pixel_perftime',
+'u5': 'Pixel_estbcost',
+'u6': 'Pixel_pagname',
+'u7': 'Pixel_countryname',
+'u8': 'Pixel_state',
+'u9': 'Pixel_totrev',
+'u11': 'Pixel_evntqty',
+'allow_custom_scripts': true,
+'send_to': ['DC-1234567/add_to_cart_group/add_to_cart_string+standard','UA-XXXXX-YY', 'AW-1234567'],
+"item": [
+	'cat', 'dog'],
+'itemid': 'Pixel_prodid',                 
+'itemname': 'Pixel_prodname',             
+'itemcategory': 'Pixel_pagname',          
+'itemprice': '1',                
+'itemquantity': '5'
+});
+
+
+gtag('event', 'purchase', {   
+  'allow_custom_scripts': true,
+  'value': '5',            
+  'transaction_id': '[Pixel_orderid]',  
+  'quantity': '5',        
+  'u1': 'Pixel_prodid',     
+  'u2': 'Pixel_prodname',   
+  'u3': 'Pixel_perfdate',   
+  'u4': 'Pixel_perftime',   
+  'u5': 'Pixel_estbcost',   
+  'u6': 'Pixel_pagname',    
+  'u7': 'Pixel_countryname',
+  'u8': 'Pixel_state',      
+  'u9': 'Pixel_totrev',     
+  'u10': 'Pixel_orderid',   
+  'u11': 'Pixel_evntqty',   
+  'send_to': ['DC-1234567/transaction_group/transaction_string+transactions', 'UA-XXXXX-YY', 'AW-1234567'],
+  'items': [{
+	'id': 'Pixel_prodid',
+	'name': 'Pixel_prodname',             
+	'category': 'Pixel_pagname',          
+	'price': '1',                
+	'quantity': '5'
+	}]
+});
+</script>
