@@ -51,7 +51,12 @@ gtag('event', 'screen_view', {
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', 'XXXXXX');
   fbq('track', 'PageView');
+  fbq('track', 'Purchase', {
+     value: '5.00', 
+     currency: 'USD'
+}); 
 </script>
+
 
 
 </head>
