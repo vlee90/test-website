@@ -1,91 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>vlee90 Site</title>
-	<link rel="stylesheet" href="structure.css">
-	<meta name="description" content="Personal website for testing purposes">
-	<meta name="author" content="Vincent">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8QJ9S7MEZ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-K8QJ9S7MEZ', {
-	'page_title': 'Vincent Test Website',
-	'page_location': 'http://vlee90.github.io/test-website/vincent_test_page.html',
-	'page_path': '/vincent_test_page.html'
-});
-
-gtag('event', 'vincent_test_event');
-gtag('event', 'vincent-test-event');
-gtag('event', 'vincent_test_event_with_parameter', {
-	'favoriteColor':'red'
-});
-
-gtag('event', 'vincent-test0event-with-parameter', {
-	'favoriteColor':'red'
-});
-
-gtag('event', 'screen_view', {
-  'app_name': 'vincent_test_appname',
-  'screen_name' : 'vincent_test_screenname',
-  'app_id': 'vincent_test_app_id',
-  'app_version': 'vincent_test_app_version',
-  'app_installer_id': 'vincent_test_app_installer_id'
-
-});
-</script>
--->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1234567890');
-  fbq('track', 'PageView');
-  fbq('track', 'Purchase', {
-     value: '5.00', 
-     currency: 'USD'
-}); 
-</script>
-
-
-
-</head>
-<body>
-<div class='wrapper'>.
-	<div class='header' onclick="headerClick()">
-		Header
-	</div>
-	<div class='main'>
-		<div class='article'>
-			<p>This is the main body of work</p>
-			Favorite Color:
-			<input type="text" name="favoriteColor" id="textField"></input>
-			Click
-		</button>
-		<!-- <iframe src="iframe.html" name="test-frame"></iframe> -->
-	</div>
-	<div class='aside'>
-		<div class='profile-picture'>
-			<img src="res/twitter-bird.jpeg" height='100px' width='100px'>
-		</div>
-		<div class='profile-description'>
-			<p>This is the aside</p>
-		</div>
-	</div>
-</div>
-<div class='footer'>
-	<p>Footer</p>
-</div>
-</div>
-</body>
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>Welcome to the mobile web</h1>
+  </body>
 </html>
