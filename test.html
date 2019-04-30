@@ -30,7 +30,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>This is the main body of work</p>
             Favorite Color:
             <input type="text" name="favoriteColor" id="textField"></input>
-            <button type="button">Click</button>
+            <button type="button" id="button">Click</button>
     </div>
     <div class='aside'>
         <div class='profile-picture'>
@@ -72,7 +72,7 @@ function logEvent(name, params) {
   }
 }
 // [END log_event]
-document.getElementById("textField").addEventListener("click", function() {
+document.getElementById("button").addEventListener("click", function() {
     console.log("event1");
     logEvent("event1", { foo: "bar", baz: 123 });
 });
